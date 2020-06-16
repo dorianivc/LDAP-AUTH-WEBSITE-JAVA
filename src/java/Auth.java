@@ -48,7 +48,7 @@ public class Auth extends HttpServlet {
  public static boolean authenticateJndi(String username, String password) throws Exception{
     Properties props = new Properties();
     props.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.ldap.LdapCtxFactory");
-    props.put(Context.PROVIDER_URL, "ldap://13.68.154.132:389");
+    props.put(Context.PROVIDER_URL, "ldap://directorio-una.eastus.cloudapp.azure.com:389");
     props.put(Context.SECURITY_PRINCIPAL, "cn=admin,dc=eastus,dc=cloudapp,dc=azure,dc=com");//adminuser - User with special priviledge, dn user
     props.put(Context.SECURITY_CREDENTIALS, "admin");//dn user password
 
@@ -67,7 +67,7 @@ public class Auth extends HttpServlet {
     try {
         props = new Properties();
         props.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.ldap.LdapCtxFactory");
-        props.put(Context.PROVIDER_URL, "ldap://13.68.154.132:389");
+        props.put(Context.PROVIDER_URL, "ldap://directorio-una.eastus.cloudapp.azure.com:389");
         props.put(Context.SECURITY_PRINCIPAL, user);
         props.put(Context.SECURITY_CREDENTIALS, password);
 
